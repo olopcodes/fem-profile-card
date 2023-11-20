@@ -1,0 +1,102 @@
+$color-white-off: #efefef;
+$color-white: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile-card {
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+  background-color: $color-white-off;
+
+  &__top {
+    height: 35%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__body {
+    position: relative;
+    height: 65%;
+    padding: 6rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid $color-white;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+    span {
+      font-weight: 300;
+      margin-left: 3rem;
+    }
+  }
+
+  &__location {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  &-num {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  &__stat-detail {
+    font-size: 0.85rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
